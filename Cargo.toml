@@ -1,10 +1,10 @@
 [package]
-name = "rustdesk"
-version = "1.4.6"
-authors = ["rustdesk <info@rustdesk.com>"]
+name = "mastertuning-remote"
+version = "1.0.0"
+authors = ["MasterTuning S.R.L. <info@mastertuning.it>"]
 edition = "2021"
 build= "build.rs"
-description = "RustDesk Remote Desktop"
+description = "MasterTuning Remote - Assistenza Remota"
 default-run = "rustdesk"
 rust-version = "1.75"
 
