@@ -1,5 +1,5 @@
 [package]
-name = "mastertuning-remote"
+name = "rustdesk"
 version = "1.0.0"
 authors = ["MasterTuning S.R.L. <info@mastertuning.it>"]
 edition = "2021"
