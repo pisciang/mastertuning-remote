@@ -32,8 +32,8 @@ jobs:
           flutter-version: ${{ env.FLUTTER_VERSION }}
           channel: stable
 
-      - name: Install LLVM
-        uses: nicol-im/install-llvm-action@master
+      - name: Install LLVM and Clang
+        uses: KyleMayes/install-llvm-action@v2
         with:
           version: ${{ env.LLVM_VERSION }}
 
@@ -82,9 +82,14 @@ jobs:
           java-version: 17
 
       - name: Setup Android NDK
-        uses: nicol-im/setup-android-ndk@v2
+        uses: nttld/setup-ndk@v1
         with:
           ndk-version: r26d
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libclang-dev nasm
 
       - name: Build Android APK
         shell: bash
